@@ -30,8 +30,6 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 10px;
-
-
 }
 
 a {
@@ -123,7 +121,7 @@ a {
   min-height: 140px;
   order: 2;
   overflow-x: scroll;
-  padding: 20px 0px;
+  padding: 20px 0;
   white-space: nowrap;
   width: 95%;
 
@@ -166,7 +164,6 @@ a {
     display: none;
   }
 
-
   .main-content {
     flex-direction: row;
     height: 99%;
@@ -189,7 +186,6 @@ a {
     order: 0;
     overflow-y: scroll;
     padding: 20px 30px;
-
   }
 
   .thumbnail-item {

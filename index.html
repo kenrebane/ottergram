@@ -11,17 +11,35 @@
   <link rel="stylesheet" href="styles/stylesheet.css">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
 </head>
+<!--
+   Body tag has class hidden-detail that toggles detailed enlargement
+   of the thumbnail
+     Used by main.js/hideDetails() and showDetails()
+ -->
 
 <body>
-
+  <!--Header with some fancy logo :D -->
   <header class="main-header">
     <h1 class="logo-text">OTTERGRAM</h1>
   </header>
 
   <main class="main-content">
-
+    <!--Otter list items that appear on the scrollable part-->
     <ul class="thumbnail-list">
       <li class="thumbnail-item">
+        <!--
+          Data types for [A ELEMENTS] and what are they used for:
+
+            data-image-role is for selecting the thumbnail links
+              used by main.js/getThumbNailsArray() for creating a thumbnail array
+            data-image-title is for getting the corresponding heading
+              used by main.js/setDetails() for providing the correct heading for
+              the corresponding picture
+            data-image-url path to the image file
+              used by main.js/setDetails() for providing the correct URL for
+              displaying in the detailed window
+
+        -->
         <a href="img/otter1.jpg" data-image-role="trigger" data-image-title="Stayin' Alive" data-image-url="img/otter1.jpg">
           <img  class="thumbnail-image" src="img/otter1.jpg" alt="An otter">
           <span class="thumbnail-title">Barry</span>
@@ -146,8 +164,14 @@
         </a>
       </li>
     </ul>
-
+    <!--Enlarged Image of the thumbnail-->
     <div class="detail-image-container">
+      <!--
+          Detail-image-frame has a hidden class is-tiny that creates the show up
+          effect of the detailed image upon clicking a thumbnail
+            data-image-role is used for selecting the element in main.js/showDetails()
+            
+        -->
       <div class="detail-image-frame" data-image-role="frame">
         <img data-image-role="target" class="detail-image" src="img/otter1.jpg" alt="Barry">
         <span data-image-role="title" class="detail-image-title">Stayin' Alive</span>
